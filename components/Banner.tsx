@@ -19,7 +19,7 @@ function Banner() {
         </h2>
         <h1
           className="text-white bg-gray-900 w-fit text-xl py-1 px-6 rounded-full
-        cursor-pointer hover:bg-black"
+        cursor-pointer hover:bg-black font-semibold transition-all duration-200 ease-out"
         >
           Start reading
         </h1>

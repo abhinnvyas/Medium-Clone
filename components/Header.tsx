@@ -14,26 +14,20 @@ function Header() {
             alt=""
           />
         </Link>
+      </div>
+      <div className="flex space-x-5 items-center">
         <div
           className="hidden md:inline-flex 
-        items-center space-x-5 cursor-pointer"
+        items-center space-x-5 cursor-pointer text-black"
         >
           <h3 className="cursor-pointer">About</h3>
           <h3 className="cursor-pointer">Contact</h3>
-          <h3
-            className="text-white bg-green-600
-          py-1 px-4 rounded-full cursor-pointer"
-          >
+          <h3 className="border px-4 py-1 border-black rounded-full cursor-pointer">
             Follow
           </h3>
         </div>
-      </div>
-      <div
-        className="flex space-x-5 items-center
-      text-green-600"
-      >
-        <h1 className="cursor-pointer">Sign in</h1>
-        <h1 className="border px-4 py-1 border-green-600 rounded-full cursor-pointer">
+        <h1 className="hidden sm:inline-flex cursor-pointer">Sign in</h1>
+        <h1 className="text-white bg-black py-1 px-4 rounded-full cursor-pointer">
           Get Started
         </h1>
       </div>
