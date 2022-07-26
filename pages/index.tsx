@@ -21,21 +21,31 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
       <Header />
       <Banner />
 
-      <div>
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6
+      p-2 md:p-6"
+      >
         {posts.map((post) => (
           <Link key={post._id} href={post.slug.current}>
-            <div>
+            <div
+              className="group cursor-pointer border rounded-lg overflow-hidden
+            shadow-md hover:shadow-xl transition-all duration-200 ease-in-out"
+            >
               <img
-                className="object-contain w-48"
+                className="h-60 w-full object-cover group-hover:scale-105
+                transition-transform duration-200 ease-in-out"
                 src={urlFor(post.mainImage).url()!}
                 alt=""
               />
-              <div>
-                <div>
-                  <p>{post.title}</p>
-                  <p>
+              <div className="flex space-x-1 justify-between p-5 bg-white">
+                <div className="flex flex-col space-y-2">
+                  <p className="font-bold text-lg">{post.title}</p>
+                  <p className="text-xs">
                     {post.description}
-                    <span className="font-bold"> by {post.author.name}</span>
+                    <span className="font-semibold">
+                      {" "}
+                      by {post.author.name}
+                    </span>
                   </p>
                 </div>
                 <img
