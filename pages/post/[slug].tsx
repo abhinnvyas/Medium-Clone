@@ -65,7 +65,43 @@ function Post({ post }: Props) {
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
           />
         </div>
+        <hr className="max-w-lg mt-5 mx-auto border border-yellow-500 " />
       </article>
+
+      <form className="flex flex-col p-5 max-w-2xl mx-auto mb-10">
+        <h3 className="text-sm text-yellow-500 font-bold">
+          Enjoyed this article?
+        </h3>
+        <h4 className="text-3xl font-bold">Leave a comment down below!</h4>
+        <hr className="py-2 mt-2" />
+        <label className="block mb-5">
+          <span className="text-gray-800">Name</span>
+          <input
+            className="block shadow border rounded py-2 px-3 mt-1 w-full form-input 
+            focus:ring ring-yellow-500 outline-none"
+            placeholder="Full Name"
+            type="text"
+          />
+        </label>
+        <label className="block mb-5">
+          <span className="text-gray-800">Email</span>
+          <input
+            className="block shadow border rounded py-2 px-3 mt-1 w-full form-input
+            focus:ring ring-yellow-500 outline-none"
+            placeholder="Email"
+            type="text"
+          />
+        </label>
+        <label className="block mb-5">
+          <span className="text-gray-800">Comment</span>
+          <textarea
+            className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full
+            focus:ring ring-yellow-500 outline-none"
+            placeholder="Comment"
+            rows={8}
+          />
+        </label>
+      </form>
     </main>
   );
 }
